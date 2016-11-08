@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Logic Gates</string>
+    <string name="title_activity_and">AndActivity</string>
+</resources>

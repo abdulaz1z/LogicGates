@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp"
+        tools:context="com.example.android.logicgates.QuizActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/titleBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/quiz" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/buttonBackground"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/button"
+                android:onClick="home"
+                android:text="Home"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonText" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/button"
+                android:onClick="quiz"
+                android:text="Retake"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonText" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/lineColor">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/innerBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="6dp"
+                    android:maxLines="20"
+                    android:text="Grading rules"
+                    android:textColor="@color/descriptionText"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="6dp"
+                    android:maxLines="20"
+                    android:text="* Score calculation (# of correct answers / # of question answered)."
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="6dp"
+                    android:maxLines="20"
+                    android:text="* Each question worth is 10 points."
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/lineColor" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="12dp"
+                    android:maxLines="20"
+                    android:text="1. Logic gates are the physical devices inside electronics that carry out a Boolean function, which outputs something if something else is true."
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/qs1_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="True"
+                            android:textColor="@color/inputTextColor" />
+
+                        <RadioButton
+                            android:id="@+id/qs1_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="False"
+                            android:textColor="@color/inputTextColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/if_wrong_qs1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="50dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="20"
+                    android:text="2. What AND gate outputs when input one is 1 and input two is 0?"
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/qs2_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 1"
+                            android:textColor="@color/inputTextColor" />
+
+                        <RadioButton
+                            android:id="@+id/qs2_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 0"
+                            android:textColor="@color/inputTextColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/if_wrong_qs2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="50dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="20"
+                    android:text="3. What NAND gate outputs when both inputs are 1?"
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/qs3_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 1"
+                            android:textColor="@color/inputTextColor" />
+
+                        <RadioButton
+                            android:id="@+id/qs3_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 0"
+                            android:textColor="@color/inputTextColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/if_wrong_qs3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="50dp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="20"
+                    android:text="4. What OR gate outputs and both inputs are 1?"
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/qs4_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 1"
+                            android:textColor="@color/inputTextColor" />
+
+                        <RadioButton
+                            android:id="@+id/qs4_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 0"
+                            android:textColor="@color/inputTextColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/if_wrong_qs4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="50dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="20"
+                    android:text="5. What NOR gate outputs when input one is 1 and input two is 0?"
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/qs5_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 1"
+                            android:textColor="@color/inputTextColor" />
+
+                        <RadioButton
+                            android:id="@+id/qs5_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 0"
+                            android:textColor="@color/inputTextColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/if_wrong_qs5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="50dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="20"
+                    android:text="6. What XOR gate outputs when both inputs are 0?"
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/qs6_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 1"
+                            android:textColor="@color/inputTextColor" />
+
+                        <RadioButton
+                            android:id="@+id/qs6_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 0"
+                            android:textColor="@color/inputTextColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/if_wrong_qs6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="50dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="20"
+                    android:text="7. What XNOR gate outputs when input one is 0 and input two is 1?"
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/qs7_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 1"
+                            android:textColor="@color/inputTextColor" />
+
+                        <RadioButton
+                            android:id="@+id/qs7_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 0"
+                            android:textColor="@color/inputTextColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/if_wrong_qs7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="50dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="20"
+                    android:text="8. What NOT gate outputs when input is 1?"
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/qs8_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 1"
+                            android:textColor="@color/inputTextColor" />
+
+                        <RadioButton
+                            android:id="@+id/qs8_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 0"
+                            android:textColor="@color/inputTextColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/if_wrong_qs8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="50dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="20"
+                    android:text="9. What this figure outputs?"
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/question9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/qs9_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 1"
+                            android:textColor="@color/inputTextColor" />
+
+                        <RadioButton
+                            android:id="@+id/qs9_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 0"
+                            android:textColor="@color/inputTextColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/if_wrong_qs9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="50dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="20"
+                    android:text="10. What this figure outputs?"
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/question10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp">
+
+                        <RadioButton
+                            android:id="@+id/qs10_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 1"
+                            android:textColor="@color/inputTextColor" />
+
+                        <RadioButton
+                            android:id="@+id/qs10_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/inputTint"
+                            android:text="It outputs 0"
+                            android:textColor="@color/inputTextColor" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/if_wrong_qs10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="50dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="10"
+                        android:text=""
+                        android:textColor="@color/outputTextColor"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/button"
+                    android:onClick="submit"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/buttonText" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

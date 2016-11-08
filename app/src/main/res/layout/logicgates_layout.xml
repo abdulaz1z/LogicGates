@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp"
+        tools:context="com.example.android.logicgates.LogicGatesActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/titleBackground"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/logicgates" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/buttonBackground"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/button"
+                android:onClick="home"
+                android:text="Home"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonText" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/button"
+                android:onClick="quiz"
+                android:text="Quiz"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonText" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/button"
+                android:onClick="andGate"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonText" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/lineColor"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#26A69A"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="6dp"
+                    android:maxLines="20"
+                    android:text="      Logic gates are the basic building block of a digital circuit. Logic gates are the physical devices inside electronics that carry out a Boolean function, which outputs something if something else is true. There are seven basic logic gates and most of each has two inputs and one output. Two inputs can be either 0 (false/low) or 1 (true/high)."
+                    android:textColor="@color/descriptionText"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logicallgates" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/headerBackground"
+                    android:gravity="center"
+                    android:text="Seven Basic Logic Gates"
+                    android:textColor="@color/headerTextColor"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="#26A69A"
+                            android:onClick="andGate"
+                            android:src="@drawable/and" />
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="0dp"></View>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="#26A69A"
+                            android:onClick="nandGate"
+                            android:src="@drawable/nand" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="#26A69A"
+                            android:onClick="orGate"
+                            android:src="@drawable/or" />
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="1dp"></ImageView>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="#26A69A"
+                            android:onClick="norGate"
+                            android:src="@drawable/nor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="#26A69A"
+                            android:onClick="xorGate"
+                            android:src="@drawable/xor" />
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="1dp"></ImageView>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="#26A69A"
+                            android:onClick="xnorGate"
+                            android:src="@drawable/xnor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="#26A69A"
+                            android:onClick="notGate"
+                            android:src="@drawable/not" />
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="1dp"></ImageView>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="#26A69A" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

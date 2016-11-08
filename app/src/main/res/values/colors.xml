@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#009688</color>
+    <color name="colorAccent">#009688</color>
+
+    <color name="descriptionText">#ffffff</color>
+    <color name="buttonText">#ffffff</color>
+    <color name="button">#009688</color>
+    <color name="background">#80CBC4</color>
+    <color name="innerBackground">#26A69A</color>
+    <color name="buttonBackground">#26A69A</color>
+    <color name="titleBackground">#009688</color>
+    <color name="menuBackground">#26A69A</color>
+    <color name="headerBackground">#009688</color>
+    <color name="headerTextColor">#ffffff</color>
+    <color name="inputTextColor">#ffffff</color>
+    <color name="inputTint">#ffffff</color>
+    <color name="outputTextColor">#ffffff</color>
+    <color name="lineColor">#ffffff</color>
+
+</resources>
