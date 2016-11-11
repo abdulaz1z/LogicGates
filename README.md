@@ -9,5 +9,6 @@ In this app you will be able to do the following:
 -take quiz to see how much you know about each logic gates
 -you can learn fast
 
+[Download Logic Gates](https://play.google.com/store/apps/details?id=com.azizahmed.logicgates&hl=en)
 
 ![app screenshot](https://github.com/abdulaz1z/LogicGates/blob/master/app/src/main/res/drawable/app%20sreenshot.png)
