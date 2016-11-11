@@ -8,3 +8,6 @@ In this app you will be able to do the following:
 -interact with live logic gates 
 -take quiz to see how much you know about each logic gates
 -you can learn fast
+
+
+![app screenshot](https://github.com/abdulaz1z/LogicGates/blob/master/app/src/main/res/drawable/app%20sreenshot.png)
